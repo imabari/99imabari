@@ -38,7 +38,7 @@
           jsonData = jsonData.map((entry) => {
             if (entry.date === todayDate) {
               entry.hospital = entry.hospital.filter(
-                (hospital) => hospital.type === "指定なし"
+                (hospital) => hospital.medical === "指定なし"
               );
             }
             return entry;
@@ -61,7 +61,16 @@
         // 日付のサブヘッドを追加します
         let subhead = document.createElement("h3");
         subhead.classList.add("page-subhead");
-        subhead.textContent = dateData.date_week;
+
+        let link = document.createElement("a");
+        link.href = "#";
+        link.textContent = dateData.date_week;
+        subhead.appendChild(link);
+
+      // hrタグを追加
+      let hrTag = document.createElement("hr");
+      mainElement.appendChild(hrTag);
+
         mainElement.appendChild(subhead);
 
         // 各病院の情報をループしてカードを追加します
@@ -71,11 +80,11 @@
 
           let card = `
                     <div class="card">
-                        <p class="subtitle">${hospital.type}</p>
-                        <p class="title">${hospital.name}</p>
+                        <p class="subtitle">${hospital.medical}</p>
+                        <p class="title"><a href='${hospital.link}'>${hospital.name}</a></p>
                         <p>${hospital.time}</p>
                         <p>${hospital.address}</p>
-                        <p>TEL 📞<a href='tel:${hospital.tel}'>${hospital.tel}</a></p>
+                        <p>${hospital.daytime ? `TEL <a href='tel:${hospital.daytime}'>${hospital.daytime}</a>` : ''}</p>
                         <div class="icon-wrap"><a href='${hospital.navi}'><button class="goto-button">ルート案内</button></a></div>
                     </div>
                 `;

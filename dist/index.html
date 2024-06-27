@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head prefix="og: http://ogp.me/ns#">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>99いまばり</title>
+    <meta
+      name="description"
+      content="「99いまばり」は愛媛県今治市の本日の救急病院（当番医）を案内するページです。休日・夜間などの急な病気やケガの際、今治市内で最寄りの救急病院を簡単に探すことができます。"
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="99いまばり" />
+    <meta
+      property="og:description"
+      content="「99いまばり」は愛媛県今治市の本日の救急病院（当番医）を案内するページです。休日・夜間などの急な病気やケガの際、今治市内で最寄りの救急病院を簡単に探すことができます。"
+    />
+    <meta property="og:url" content="https://imabari.github.io/99imabari/" />
+    <meta
+      property="og:image"
+      content="https://imabari.github.io/99imabari/ogp.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="99いまばり" />
+
+    <title>本日の救急病院（今治市） - 99いまばり</title>
     <!-- リセットCSSのCDN -->
     <link
       rel="stylesheet"
@@ -15,40 +35,23 @@
 
   <body>
     <header class="header">
-      <img id="logo" src="./img/kyukyusha.png" />
-      <h1 class="app-title"><a href="./">99いまばり</a></h1>
+      <img
+        id="logo"
+        src="./img/kyukyusha.png"
+        width="80"
+        height="80"
+        alt="救急車"
+      />
+      <h1 class="app-title">99いまばり</h1>
       <div class="link-menu">
-        <a href="./" class="menu-link">今日</a>
+        <div class="menu-link active">本日</div>
         <a href="list.html" class="menu-link">今月</a>
-        <a href="info.html" class="menu-link">お知らせ</a>
+        <a href="link.html" class="menu-link">リンク</a>
       </div>
     </header>
 
     <main>
-      <h2 class="page-head">今日の当番医</h2>
-      <h3 class="page-subhead">サービス終了</h3>
-      <div class="list-container">
-        <div class="card-wrap">
-          <div class="card">
-            <p class="subtitle">お知らせ</p>
-            <p class="title">サービス終了のお知らせ</p>
-            <p>
-              突然のお知らせとなりますが、99いまばりのサービスは終了することとなりました。<br />
-              これまでのご利用、誠にありがとうございました。<br />
-            </p>
-            <br />
-            <p>
-              終了日：２０２３年９月３０日<br />
-              サービス名：９９いまばり<br />
-            </p>
-            <br />
-            <p>
-              ２０２３年８月２０日に公開され、短い期間にもかかわらず、多くの皆様にご利用いただき、心より感謝申し上げます。<br />
-              終了に伴い、ご迷惑をおかけいたしますことをお詫び申し上げます。<br />
-            </p>
-          </div>
-        </div>
-      </div>
+      <h2 class="page-head">今日の救急病院</h2>
       <section></section>
     </main>
 
@@ -56,5 +59,38 @@
     <script>
       displayData("today");
     </script>
+
+    <div id="qrcode">
+      <img src="https://imabari.github.io/99imabari/img/qrcode.png" />
+    </div>
+
+    <footer>
+      <a
+        href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+        class="twitter-share-button"
+        data-text="「99いまばり」は愛媛県今治市の本日の救急病院（当番医）を案内するページです。子ども医療電話相談（＃8000）えひめ救急電話相談（＃7119） #今治市 #救急病院"
+        data-url="https://imabari.github.io/99imabari/"
+        data-show-count="false"
+        >Tweet</a
+      >
+      <script async src="https://platform.twitter.com/widgets.js"></script>
+      <div
+        class="line-it-button"
+        data-lang="ja"
+        data-type="share-a"
+        data-env="REAL"
+        data-url="https://imabari.github.io/99imabari/"
+        data-color="default"
+        data-size="small"
+        data-count="false"
+        data-ver="3"
+        style="display: none"
+      ></div>
+      <script
+        src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js"
+        async="async"
+        defer="defer"
+      ></script>
+    </footer>
   </body>
 </html>

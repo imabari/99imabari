@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>99いまばり</title>
-    <!-- リセットCSSのCDN -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css"
-    />
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
+<head prefix="og: http://ogp.me/ns#">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="「99いまばり」は愛媛県今治市の今月の救急病院（当番医）を案内するページです。休日・夜間などの急な病気やケガの際、今治市内で最寄りの救急病院を簡単に探すことができます。">
+
+    <meta name="twitter:card" content="summary">
+    <meta property="og:title" content="99いまばり">
+    <meta property="og:description" content="「99いまばり」は愛媛県今治市の本日の救急病院（当番医）を案内するページです。休日・夜間などの急な病気やケガの際、今治市内で最寄りの救急病院を簡単に探すことができます。">
+    <meta property="og:url" content="https://imabari.github.io/99imabari/">
+    <meta property="og:image" content="https://imabari.github.io/99imabari/ogp.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="99いまばり">
+
+    <title>今月の救急病院（今治市） - 99いまばり</title>
+    <!-- リセットCSSのCDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@4.0.0/destyle.css">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
     <header class="header">
-      <img id="logo" src="./img/kyukyusha.png" />
-      <h1 class="app-title"><a href="./">99いまばり</a></h1>
-      <div class="link-menu">
-        <a href="./" class="menu-link">今日</a>
-        <a href="list.html" class="menu-link">今月</a>
-        <a href="info.html" class="menu-link">お知らせ</a>
-      </div>
+        <img id="logo" src="./img/kyukyusha.png" width="80" height="80"  alt="救急車">
+        <h1 class="app-title">99いまばり</h1>
+        <div class="link-menu">
+            <a href="./" class="menu-link">本日</a>
+            <div class="menu-link active">今月</div>
+            <a href="link.html" class="menu-link">リンク</a>
+        </div>
     </header>
 
     <main>
-      <h2 class="page-head green">今月の当番医</h2>
-      <section></section>
+        <h2 class="page-head green">今月の救急病院</h2>
+        <section></section>
     </main>
 
     <script src="./js/common.js"></script>
     <script>
-      displayData("all");
+        displayData("all");
     </script>
-  </body>
+</body>
+
 </html>

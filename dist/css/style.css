@@ -16,9 +16,7 @@
 .app-title {
   color: #ffffff;
   font-size: 32px;
-  font-weight: bold;
-  line-height: 80px;
-  margin-bottom: 20px;
+  line-height: 60px;
 }
 .link-menu {
   display: flex;
@@ -37,10 +35,16 @@
   border-radius: 20px;
   transition: opacity 0.3s ease;
 }
+
+.active {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /* list.html */
 
 .page-head {
-  margin-top: 60px;
+  margin-top: 30px;
   color: #b33c09;
   font-weight: bold;
   font-size: 24px;
@@ -49,7 +53,7 @@
 
 .page-subhead {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   color: #006bb3;
   font-size: 20px;
   text-align: center;
@@ -97,7 +101,6 @@
 
 .goto-button {
   margin-top: 15px;
-  margin-bottom: 15px;
   display: inline-block;
   padding: 0.3em 1em;
   text-decoration: none;
@@ -120,9 +123,33 @@
 
 body {
   font-size: 14px;
+  font-family: sans-serif;
   line-height: 1.8;
 }
 
 .hide {
   display: None;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc; /* 薄いグレーに指定 */
+  margin: 20px 0; /* 上下の余白を設定（任意の値） */
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+#qrcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
 }
