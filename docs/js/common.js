@@ -24,7 +24,7 @@
           jsonData = jsonData.map((entry) => {
             if (entry.date === yesterdayDate) {
               entry.hospital = entry.hospital.filter((hospital) =>
-                hospital.time.includes("翌日")
+                hospital.time.includes("翌")
               );
             }
             return entry;
